@@ -36,6 +36,7 @@ export default function BlogDetails() {
   const [error, setError] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [filteredData, setFilteredData] = useState<Blog[]>([]);
+  console.log(filteredData);
 
   useEffect(() => {
     const fetchData = async () => {
