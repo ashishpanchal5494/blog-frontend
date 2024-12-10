@@ -42,7 +42,7 @@ const Blog: React.FC = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/blogs`
+          `${import.meta.env.VITE_BACKEND_URL}/blogs`
         );
         setData(response.data);
         setFilteredData(response.data);

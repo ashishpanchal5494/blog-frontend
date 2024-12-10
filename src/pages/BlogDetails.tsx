@@ -40,7 +40,9 @@ export default function BlogDetails() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/blogs");
+        const response = await axios.get(
+          `${import.meta.env.VITE_BACKEND_URL}/blogs`
+        );
         setData(response.data);
         setFilteredData(response.data);
       } catch (err) {
@@ -59,7 +61,7 @@ export default function BlogDetails() {
       try {
         setLoading(true);
         const response = await fetch(
-          `${process.env.REACT_APP_BACKEND_URL}/blogs${id}`
+          `${import.meta.env.VITE_BACKEND_URL}/blogs/${id}`
         );
         if (!response.ok) throw new Error("Failed to fetch blog data");
         const data = await response.json();
