@@ -3,7 +3,7 @@ import "../../public/css/style.css";
 import BlogPostItem from "../components/BlogPostItem";
 import RecentPostItem from "../components/RecentPostItem";
 import axios from "axios"; // Import the auth instance
-import { auth } from "../utils/configur";
+
 import {
   signInWithPopup,
   GoogleAuthProvider,
@@ -12,6 +12,7 @@ import {
   User,
 } from "firebase/auth";
 import { IoSearch } from "react-icons/io5";
+import { auth } from "../utils/configur";
 
 interface Data {
   id: number;
